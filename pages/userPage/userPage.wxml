@@ -1,5 +1,16 @@
 <view class="container">
-<text>Welcome!!!
-</text>
-<button style="background-color: red;">fafd</button>
+  <button bindtap="queryUser" class="queryUser">查询</button>
+  <view class="table">
+    <view class="tr bg-header">
+      <view class="head">姓名</view>
+      <view class="head">年龄</view>
+      <view class="head">住址</view>
+    </view>
+    <view class="tr bg-header" wx:for="{{userList}}" wx:key="item">
+        <view class="head">{{item.userName}}</view>
+        <view class="head">{{item.age}}</view>
+        <view class="head">{{item.address}}</view>
+    </view>
+
+</view>
 </view>

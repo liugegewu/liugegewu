@@ -1,17 +1,19 @@
-// pages/test/test.js
+// 获取应用实例
+var app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    userList: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
+  onLoad:(options)=> {
 
   },
 
@@ -62,5 +64,32 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  queryUser(){
+    wx.request({
+      url: 'http://localhost:8088/app/test/',
+      data: {
+
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: "POST",
+      success:(res)=> {
+        wx.showLoading({
+          title: '查询中',
+        })
+        console.log(res)
+        this.setData({
+          userList:res.data
+        },()=>{
+          console.log('11'+this.data.userList)
+          wx.hideLoading()
+        })
+      }
+    })
+    
   }
+
 })

@@ -56,7 +56,7 @@ Page({
         console.log(res);
         this.setData({
           userAddress:{n:res.latitude,w:res.longitude},
-          showAddress:res.latitude+'N，'+res.longitude+'W'
+          showAddress:'坐标：'+res.latitude+' N，'+res.longitude+' W，开火，biubiubiu~~~~~~~'
         })
       }
     })
