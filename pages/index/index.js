@@ -10,8 +10,9 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     canIUseGetUserProfile: false,
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
-    userAddress:{n:'我的',w:'你的'},
-    showAddress:''
+    showAddress:'',
+    isShowImg:false,
+    time1:null
   },
   // 事件处理函数
   bindViewTap() {
@@ -22,7 +23,8 @@ Page({
   onLoad() {
     if (wx.getUserProfile) {
       this.setData({
-        canIUseGetUserProfile: true
+        canIUseGetUserProfile: true,
+        isShowImg:true
       })
     }
   },
@@ -49,7 +51,7 @@ Page({
   },
 
   //获取地址
-  getUserAddress(){
+  getUserAddress(e){
     wx.getLocation({
       type:'wgs84',
       success:(res)=>{
@@ -58,6 +60,17 @@ Page({
           userAddress:{n:res.latitude,w:res.longitude},
           showAddress:'坐标：'+res.latitude+' N，'+res.longitude+' W，开火，biubiubiu~~~~~~~'
         })
+      }
+    })
+    wx.showModal({
+      cancelColor: 'cancelColor',
+      title:'炮火覆盖即将开始，是否确定？',
+      success :(res)=> {
+        if (res.confirm) {
+          this.time1=setTimeout(()=>{this.setData({
+            isShowImg:false
+          })}, 1000,);
+        } 
       }
     })
   },

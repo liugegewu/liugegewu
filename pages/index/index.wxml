@@ -10,7 +10,7 @@
     <block wx:elif="{{!hasUserInfo}}">
       <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
       <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    </block> 
+    </block>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
@@ -20,11 +20,12 @@
     <text class="user-motto">{{motto}}</text>
   </view> -->
   <view>
-  <button bindtap="getUserAddress" >拒绝</button>
-  <text>{{showAddress}}</text>
+    <button bindtap="getUserAddress">拒绝</button>
+    <button bindtap="returnUserPage">用户查看</button>
+    <button bindtap="returnUserPage">访客登记</button>
   </view>
-  
 </view>
-<view>
-  <button bindtap="returnUserPage">用户管理</button>
-  </view>
+
+<view hidden="{{isShowImg}}">
+  <image src="../../utils/image/fire3.gif"/>
+</view>
