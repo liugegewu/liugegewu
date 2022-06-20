@@ -87,6 +87,10 @@ Page({
             appointmentTransfer:null,
             transferAddress:null
           })
+          
+          wx.navigateBack({
+            delta: 0,
+          })
       },
       fail:(res)=>{
         wx.showModal({

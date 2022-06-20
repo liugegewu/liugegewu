@@ -6,7 +6,7 @@
     </view>
 
     <view>
-      <text class="textTwo">性别：</text><input name="sex" />
+      <text class="textTwo">性别：</text><input name="sex" maxlength="1"/>
     </view>
 
     <view>
