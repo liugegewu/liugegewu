@@ -62,5 +62,50 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  //新增调用
+  addUser: function(res)  {
+    wx.showLoading({
+      title: '新增中......',
+    })
+    wx.request({
+      url: 'http://localhost:8088/app/add/',
+      data: res.detail.value,
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: "POST",
+      success:(res)=> {
+          wx.hideLoading()
+          this.setData({
+            userName:null,
+            sex:null,
+            address:null,
+            arrivalDate:null,
+            arrivalMode:null,
+            appointmentTransfer:null,
+            transferAddress:null
+          })
+      },
+      fail:(res)=>{
+        wx.showModal({
+          title:'失败：'+res
+        })
+      }
+    })
+  },
+
+  clearForm(){
+    this.setData({
+      userName:null,
+      sex:null,
+      address:null,
+      arrivalDate:null,
+      arrivalMode:null,
+      appointmentTransfer:null,
+      transferAddress:null
+    })
   }
+
 })

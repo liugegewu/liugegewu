@@ -9,4 +9,8 @@ public interface IUserService {
 
     List<UserEntity> selectUser();
 
+    void addUser(UserEntity entity);
+
+    void updateUser(UserEntity entity);
+
 }

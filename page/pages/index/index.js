@@ -28,6 +28,21 @@ Page({
       })
     }
   },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady() {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow() {
+    
+  },
+
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
     wx.getUserProfile({
@@ -52,16 +67,16 @@ Page({
 
   //获取地址
   getUserAddress(e){
-    wx.getLocation({
-      type:'wgs84',
-      success:(res)=>{
-        console.log(res);
-        this.setData({
-          userAddress:{n:res.latitude,w:res.longitude},
-          showAddress:'坐标：'+res.latitude+' N，'+res.longitude+' W，开火，biubiubiu~~~~~~~'
-        })
-      }
-    })
+    // wx.getLocation({
+    //   type:'wgs84',
+    //   success:(res)=>{
+    //     console.log(res);
+    //     this.setData({
+    //       userAddress:{n:res.latitude,w:res.longitude},
+    //       showAddress:'坐标：'+res.latitude+' N，'+res.longitude+' W，开火，biubiubiu~~~~~~~'
+    //     })
+    //   }
+    // })
     wx.showModal({
       cancelColor: 'cancelColor',
       title:'炮火覆盖即将开始，是否确定？',
@@ -73,12 +88,13 @@ Page({
         } 
       }
     })
+      clearTimeout(this.time1);
   },
 
   //用户页面跳转
-  returnUserPage:()=>{
+  returnUserPage:(res)=>{
     wx.navigateTo({
-      url:'/pages/userPage/userPage'
+      url:res.currentTarget.dataset.url
     })
   }
 

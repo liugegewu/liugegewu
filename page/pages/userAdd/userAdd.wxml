@@ -1,2 +1,37 @@
 <!--pages/userAdd/userAdd.wxml-->
-<text>pages/userAdd/userAdd.wxml</text>
+<view>
+  <form bindsubmit="addUser" bindreset="clearForm">
+    <view>
+      <text class="textTwo">姓名：</text><input name="userName" />
+    </view>
+
+    <view>
+      <text class="textTwo">性别：</text><input name="sex" />
+    </view>
+
+    <view>
+      <text class="textTwo">位置：</text><input name="address" />
+    </view>
+
+    <view>
+      <text>到达时间：</text><input name="arrivalDate" />
+    </view>
+
+    <view>
+      <text>到达方式：</text><input name="arrivalMode" />
+    </view>
+
+    <view>
+      <text>预约接送：</text><input name="appointmentTransfer" />
+    </view>
+
+    <view>
+      <text>接送地址：</text><input name="transferAddress" />
+    </view>
+
+    <view>
+    <button form-type="submit">保存</button>
+    <button form-type="reset">重置</button>
+    </view>
+  </form>
+</view>

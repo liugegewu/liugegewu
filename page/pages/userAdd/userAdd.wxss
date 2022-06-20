@@ -1,1 +1,23 @@
 /* pages/userAdd/userAdd.wxss */
+view{
+  margin: 10px 0 0 10px;
+  display: flex;
+}
+
+input{
+  border: 1px black solid;
+  width: 50%;
+}
+
+.textTwo{
+  /* margin-left: 31px; */
+  text-align: center;
+  width: 101.95px;
+}
+
+form{
+  font-family: "楷体";
+  font-weight: bolder;
+  font-size: 20px;
+}
+

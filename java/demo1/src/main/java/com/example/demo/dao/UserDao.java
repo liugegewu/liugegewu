@@ -11,12 +11,12 @@ public interface UserDao {
     List<UserEntity> queryUser();
 
     //新增
-    List<UserEntity> insertUser();
+    void insertUser(UserEntity entity);
 
     //修改
-    UserEntity updateUser();
+    void updateUser(UserEntity entity);
 
     //删除
-    Integer deleteUser();
+    Integer deleteUser(UserEntity entity);
 
 }

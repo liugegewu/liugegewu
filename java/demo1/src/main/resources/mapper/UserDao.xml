@@ -7,4 +7,14 @@
         from user
     </select>
 
+    <insert id="insertUser" parameterType="com.example.demo.entity.UserEntity">
+        INSERT INTO user
+        (userName, userCode, sex, birthDay, age, address)
+        VALUES(#{userName},#{userCode},#{sex},#{birthDay},#{age},#{address});
+    </insert>
+
+    <update id="updateUser" parameterType="com.example.demo.entity.UserEntity">
+
+    </update>
+
 </mapper>
