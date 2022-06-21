@@ -1,6 +1,6 @@
 /* pages/userAdd/userAdd.wxss */
-view{
-  margin: 10px 0 0 10px;
+.viewStyle{
+  margin: 10px 0 0 0;
   display: flex;
 }
 
@@ -9,8 +9,8 @@ input{
   width: 50%;
 }
 
-.textTwo{
-  /* margin-left: 31px; */
+text{
+  margin-left: 10px;
   text-align: center;
   width: 101.95px;
 }

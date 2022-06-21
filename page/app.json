@@ -7,11 +7,12 @@
     "pages/tarBar/rightBar",
     "pages/userAdd/userAdd"
   ],
+  
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#111111",
+    "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "菜菜",
-    "navigationBarTextStyle":"white",
+    "navigationBarTextStyle":"black",
     "enablePullDownRefresh":false
   },
   "style": "v2",
@@ -24,19 +25,23 @@
     },
 
     "tabBar": {
+      "custom": true,
       "borderStyle": "black",
       "color": "black",
       "list": [
       {
         "pagePath": "pages/index/index",
+        "iconPath": "/utils/image/married/icon.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/tarBar/leftBar",
+        "iconPath": "/utils/image/married/icon.png",
         "text": "左"
       },
       {
         "pagePath": "pages/tarBar/rightBar",
+        "iconPath": "/utils/image/married/icon.png",
         "text": "右"
       }
     ]

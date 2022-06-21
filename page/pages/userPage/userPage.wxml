@@ -1,4 +1,5 @@
 <view class="container">
+<image src="/utils/image/married/m3.jpg" class="bg"/>
   <button bindtap="queryUser" class="queryUser">查询</button>
   <view class="table">
     <view class="tr ">
