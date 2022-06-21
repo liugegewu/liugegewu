@@ -2,15 +2,9 @@
 <view class="container">
 <image class="bg" src="/utils/image/married/m1.jpg"/>
   <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:if="{{!hasUserInfo}}">
+      <button bindtap="getUserProfile"><image src="/utils/image/angry.ico" class="userinfo-avatar"/></button>
+      <button bindtap="getUserProfile"> 登录/注册 </button>
     </block>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
@@ -20,7 +14,7 @@
   <!-- <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view> -->
-  <view style="border-top: 2px black solid;margin-top: 25%;"> 
+  <view wx:if="{{hasUserInfo}}" style="border-top: 2px black solid;margin-top: 25%;"> 
     <button bindtap="returnUserPage">详情</button>
     <button bindtap="getUserAddress">拒绝</button>
     <button bindtap="returnUserPage" data-url="/pages/userPage/userPage">信息查看</button>
