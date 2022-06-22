@@ -45,5 +45,6 @@
         "text": "右"
       }
     ]
-    }
+    },
+    "lazyCodeLoading": "requiredComponents"
 }

@@ -1,3 +1,3 @@
 {
-  "usingComponents": {"my-component": "/pages/custom-tabbar/index"}
+  "usingComponents": {"my-component": "/custom-tab-bar/index"}
 }

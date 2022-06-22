@@ -14,10 +14,10 @@
     </block>
   </view>
   <view wx:if="{{hasUserInfo}}" style="border-top: 2px black solid;margin-top: 40%;position: fixed;z-index: auto;">
-    <button bindtap="returnUserPage">详情</button>
-    <button bindtap="getUserAddress">拒绝</button>
-    <button bindtap="returnUserPage" data-url="/pages/userPage/userPage">信息查看</button>
-    <button bindtap="returnUserPage" data-url="/pages/userAdd/userAdd">参加人员信息登记</button>
+    <button bindtap="returnUserPage" hover-class="none">详情</button>
+    <button bindtap="getUserAddress" hover-class="none">拒绝</button>
+    <button bindtap="returnUserPage" data-url="/pages/userPage/userPage" hover-class="none">信息查看</button>
+    <button bindtap="returnUserPage" data-url="/pages/userAdd/userAdd" hover-class="none">参加人员信息登记</button>
   </view>
 </view>
 
