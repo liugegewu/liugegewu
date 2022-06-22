@@ -11,7 +11,8 @@ Page({
     canIUseOpenData: false, // 如需尝试获取用户信息可改为false
     showAddress:'',
     isShowImg:false,
-    time1:null
+    time1:null,
+    time2:null
   },
   // 事件处理函数
   bindViewTap() {
@@ -23,7 +24,6 @@ Page({
     if (wx.getUserProfile) {
       this.setData({
         canIUseGetUserProfile: true,
-        // canIUseOpenData:false,
         isShowImg:true
       })
     }
@@ -33,26 +33,14 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-    if (wx.getUserProfile) {
-      this.setData({
-        canIUseGetUserProfile: true,
-        // canIUseOpenData:false,
-        isShowImg:true
-      })
-    }
+  
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow() {
-    if (wx.getUserProfile) {
-      this.setData({
-        canIUseGetUserProfile: true,
-        // canIUseOpenData:false,
-        isShowImg:true
-      })
-    }
+
   },
 
   getUserProfile(e) {
@@ -90,8 +78,8 @@ Page({
           })}, 1000,);
         } 
       }
-    })
-      clearTimeout(this.time1);
+    },clearTimeout(this.time1)
+    )
   },
 
   //用户页面跳转

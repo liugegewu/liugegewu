@@ -1,20 +1,19 @@
 <!--index.wxml-->
 <view class="container">
-<image class="bg" src="/utils/image/married/m1.jpg"/>
+  <image class="bg" src="/utils/image/married/m1.jpg" />
   <view class="userinfo">
     <block wx:if="{{!hasUserInfo}}">
-      <button bindtap="getUserProfile"><image src="/utils/image/angry.ico" class="userinfo-avatar"/></button>
-      <button bindtap="getUserProfile"> 登录/注册 </button>
+      <button bindtap="getUserProfile" hover-class="none">
+        <image src="/utils/image/angry.ico" class="userinfo-avatar" />
+      </button>
+      <button bindtap="getUserProfile" hover-class="none"> 登录/注册 </button>
     </block>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <!-- <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view> -->
-  <view wx:if="{{hasUserInfo}}" style="border-top: 2px black solid;margin-top: 25%;"> 
+  <view wx:if="{{hasUserInfo}}" style="border-top: 2px black solid;margin-top: 40%;position: fixed;z-index: auto;">
     <button bindtap="returnUserPage">详情</button>
     <button bindtap="getUserAddress">拒绝</button>
     <button bindtap="returnUserPage" data-url="/pages/userPage/userPage">信息查看</button>
