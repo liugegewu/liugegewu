@@ -21,8 +21,10 @@
   </view>
 </view>
 
-<view hidden="{{isShowImg}}" class="image1">
-  <image src="../../utils/image/fire/fire3.gif" mode="aspectFit" />
-</view>
-
 <my-component my-property="example" />
+<modal show="{{isShowImg}}" single="true">
+  <image src="../../utils/image/fire/fire3.gif" style="height:200px;width: 280px;" />
+  <view>
+    <text style="color: red;font-weight: bolder;">仅以此图警告，如有下次，后果自负！！！</text>
+  </view>
+</modal>

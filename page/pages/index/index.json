@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "my-component": "/custom-tab-bar/index"
+    "my-component": "/custom-tab-bar/index",
+    "modal":"/modal/modal"
   } 
 }

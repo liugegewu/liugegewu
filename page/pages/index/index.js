@@ -24,7 +24,7 @@ Page({
     if (wx.getUserProfile) {
       this.setData({
         canIUseGetUserProfile: true,
-        isShowImg:true
+        // isShowImg:true
       })
     }
   },
@@ -74,7 +74,7 @@ Page({
       success :(res)=> {
         if (res.confirm) {
           this.time1=setTimeout(()=>{this.setData({
-            isShowImg:false
+            isShowImg:true
           })}, 1000,);
         } 
       }
