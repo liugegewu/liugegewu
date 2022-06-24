@@ -2,12 +2,10 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/userPage/userPage",
     "pages/tarBar/leftBar",
-    "pages/tarBar/rightBar",
-    "pages/userAdd/userAdd"
+    "pages/tarBar/rightBar"
   ],
-  
+
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#ffffff",
@@ -46,5 +44,14 @@
       }
     ]
     },
-    "lazyCodeLoading": "requiredComponents"
+    "lazyCodeLoading": "requiredComponents",
+    "subPackages": [
+      {
+        "root": "userPage",
+        "pages": [
+          "page/userAdd/userAdd",
+          "page/userPage/userPage"
+        ]
+      }
+    ]
 }

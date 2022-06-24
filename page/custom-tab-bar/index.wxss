@@ -27,9 +27,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1px rgb(235, 228, 228) solid;
-  background-color: rgb(197, 181, 181);
+  border: 1px gold solid;
+  /* background-color: rgb(197, 181, 181); */
+  background-color: gold;
   border-radius: 50%;
+  margin: 5px 5px
 }
 
 .tab-bar-item cover-image {
